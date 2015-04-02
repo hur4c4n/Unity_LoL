@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 36ac7ff96c4d6984b974aa721a01adc8
+labels:
+- USFX
+- creak
+- mono
+- wood
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

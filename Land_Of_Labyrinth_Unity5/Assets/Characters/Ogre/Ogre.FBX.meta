@@ -1,0 +1,97 @@
+fileFormatVersion: 2
+guid: d2941522ffecdd740b31b6052bada734
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Body_Ogre_Init
+    100002: //RootNode
+    100004: Sphere001
+    100006: Sphere002
+    400000: Body_Ogre_Init
+    400002: //RootNode
+    400004: Sphere001
+    400006: Sphere002
+    2300000: Body_Ogre_Init
+    2300002: Sphere001
+    2300004: Sphere002
+    3300000: Body_Ogre_Init
+    3300002: Sphere001
+    3300004: Sphere002
+    4300000: Body_Ogre_Init
+    4300002: Sphere001
+    4300004: Sphere002
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton:
+    - name: Ogre(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Body_Ogre_Init
+      position: {x: 1.60050084e-09, y: -3.07118898e-05, z: -.0366153084}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Sphere001
+      position: {x: -.0382491648, y: 1.93318558, z: .142260224}
+      rotation: {x: .00189126178, y: .015503346, z: .000538093504, w: .99987787}
+      scale: {x: 1.19140959, y: 1.19140971, z: 1.19140959}
+      transformModified: 1
+    - name: Sphere002
+      position: {x: .0378549248, y: 1.93318558, z: .142260224}
+      rotation: {x: .00187405176, y: .0457825102, z: .000596367754, w: .998949528}
+      scale: {x: 1.19140959, y: 1.19140971, z: 1.19140947}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 94e072855f9e49149aaf1e46567c04f3
+labels:
+- USFX
+- stereo
+- sci-fi
+- robotic
+- transform
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

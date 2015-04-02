@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: e4d876f278d56824a9053488b8fe8c7c
+labels:
+- USFX
+- mono
+- ammo
+- FPS
+- firearm
+- reload
+- handling
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

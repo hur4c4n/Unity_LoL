@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3e20769fc1eb696408097b9b72496698
+labels:
+- USFX
+- loop
+- alarm
+- stereo
+- digital
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1d72f85392f490d43abc5f1c4074ee2c
+labels:
+- USFX
+- mono
+- loop
+- machine
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

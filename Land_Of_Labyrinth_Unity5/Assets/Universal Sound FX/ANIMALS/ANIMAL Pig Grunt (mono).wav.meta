@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c3e7cb741828a42499cb7998dd42d4d0
+labels:
+- USFX
+- animal
+- mono
+- grunt
+- pig
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

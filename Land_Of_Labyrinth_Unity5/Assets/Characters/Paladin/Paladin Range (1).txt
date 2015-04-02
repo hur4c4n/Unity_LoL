@@ -1,0 +1,16 @@
+0-1		T-Stance
+1-36		Idle Still
+36-55		Idle to Battle stance
+55-96		Battle stance
+96-123		Attack 1
+124-169		Attack 2
+170-225		Attack 3
+226-247		Hard Hit Left
+248-285		Battle Walk
+286-327		Die
+328-351		Hard Hit Right
+352-376		Hard Hit Mid
+377-392		Weak Hit Left
+392-408		Weak Hit Right
+408-424		Weak Hit Mid
+424-449		Close Attack

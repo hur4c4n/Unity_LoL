@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 8dffce9855535bb449bde154442879c0
+labels:
+- USFX
+- stereo
+- ui
+- interface
+- warning
+- error
+- denied
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

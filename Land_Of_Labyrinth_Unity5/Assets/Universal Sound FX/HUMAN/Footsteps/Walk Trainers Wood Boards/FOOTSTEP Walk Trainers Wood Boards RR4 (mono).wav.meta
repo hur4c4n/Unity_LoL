@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b35bb5e75d8e5b446b7f19acab0457e4
+labels:
+- USFX
+- mono
+- footstep
+- human
+- body
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

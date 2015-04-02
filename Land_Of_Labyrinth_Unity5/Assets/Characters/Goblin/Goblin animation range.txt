@@ -1,0 +1,17 @@
+0-1		T-stance
+1-767		Search_Idle
+768-873		Fight_Idle
+874-924 	Attack_01
+925-989 	Attack_02
+990-1049	Attack_03
+1050-1086	Walk
+1087-1105	Run
+1106-1147	Hit Hard Middle
+1148-1258	Hit_loose
+1258-1274	Loose_Idle_Pray
+1275-1353	Loose_Die
+1354-1393	Hit Hard Left
+1394-1432	Hit Hard Right
+1433-1448	Hit Weak Middle
+1448-1464	Hit Weak Left
+1464-1481	Hit Weak Right

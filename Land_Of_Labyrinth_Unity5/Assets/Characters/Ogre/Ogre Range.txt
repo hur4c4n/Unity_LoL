@@ -1,0 +1,16 @@
+0		T-pose
+1-322		Idle
+323-473		Pissing-Idle
+473-617		Piss_spoted by hero
+618-662		Walk Idle
+663-683		Run
+684-727		Idle_to_Alert
+727-832		Battle Stance
+832-901		Attack_01
+902-967		Attack_02
+968-1023	Attack_03
+1024-1052	Battle_Walk
+1053-1083	Hit_Right_Strong
+1084-1113	Hit_Left_Strong
+1114-1143	Hit Midle_Strong
+1144-1185	Die

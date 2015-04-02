@@ -1,0 +1,9 @@
+0-1		T-Stance
+1-24		Idle to Battle stance
+24-65		Battle stance
+65-92		Attack 1
+93-138		Attack 2
+139-194		Attack 3
+195-216		Hit
+217-254		Battle Walk
+255-296		Die

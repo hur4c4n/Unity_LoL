@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 196e0ab0b019b014daf62b89e93a1096
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bone012
+    100002: Bone013
+    100004: Bone014
+    100006: Bone015
+    100008: Bone016
+    100010: Bone017
+    100012: Bone018
+    100014: Bone019
+    100016: Bone020
+    100018: Bone021
+    100020: Bone022
+    100022: Bone023
+    100024: Bone024
+    100026: Bone025
+    100028: Bone026
+    100030: Bone027
+    100032: Bone028
+    100034: //RootNode
+    100036: Chain_Hole_01
+    100038: Chain_Hole_02
+    100040: Chains001
+    100042: Chains002
+    100044: DrawBridge_Door
+    100046: Object005
+    100048: Object006
+    100050: Pillars_Gate_DrawBridge
+    100052: Torus002
+    100054: Torus003
+    100056: Torus001
+    100058: Rotation Axis 01
+    100060: Rotation Axis 02
+    400000: Bone012
+    400002: Bone013
+    400004: Bone014
+    400006: Bone015
+    400008: Bone016
+    400010: Bone017
+    400012: Bone018
+    400014: Bone019
+    400016: Bone020
+    400018: Bone021
+    400020: Bone022
+    400022: Bone023
+    400024: Bone024
+    400026: Bone025
+    400028: Bone026
+    400030: Bone027
+    400032: Bone028
+    400034: //RootNode
+    400036: Chain_Hole_01
+    400038: Chain_Hole_02
+    400040: Chains001
+    400042: Chains002
+    400044: DrawBridge_Door
+    400046: Object005
+    400048: Object006
+    400050: Pillars_Gate_DrawBridge
+    400052: Torus002
+    400054: Torus003
+    400056: Torus001
+    400058: Rotation Axis 01
+    400060: Rotation Axis 02
+    2300000: Chain_Hole_01
+    2300002: Chain_Hole_02
+    2300004: DrawBridge_Door
+    2300006: Object005
+    2300008: Object006
+    2300010: Pillars_Gate_DrawBridge
+    2300012: Torus002
+    2300014: Torus003
+    2300016: Torus001
+    2300018: //RootNode
+    2300020: Rotation Axis 01
+    2300022: Rotation Axis 02
+    3300000: Chain_Hole_01
+    3300002: Chain_Hole_02
+    3300004: DrawBridge_Door
+    3300006: Object005
+    3300008: Object006
+    3300010: Pillars_Gate_DrawBridge
+    3300012: Torus002
+    3300014: Torus003
+    3300016: Torus001
+    3300018: //RootNode
+    3300020: Rotation Axis 01
+    3300022: Rotation Axis 02
+    4300000: Pillars_Gate_DrawBridge
+    4300002: Chain_Hole_02
+    4300004: Chain_Hole_01
+    4300006: DrawBridge_Door
+    4300008: Torus003
+    4300010: Chains002
+    4300012: Chains001
+    4300014: Torus002
+    4300016: Object005
+    4300018: Object006
+    4300020: Torus001
+    4300022: Rotation Axis 01
+    4300024: Rotation Axis 02
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Chains001
+    13700002: Chains002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

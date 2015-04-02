@@ -1,0 +1,109 @@
+Walk:
+0-90		Normal
+90-240		Look Around
+240-330		Look Back
+330-450		check bag
+
+Idle:
+451-659		Normal
+659-867 	Idle2
+867-1075  	Idle3
+
+
+Battle Idle:
+1075-1099	Normal_Idle_to_Battle_Idle
+1099-1192	Battle_Idle
+
+Attacks:
+1193-1223	Front Attack
+1223-1267	Double Attack
+
+Dodges:
+1268-1310	Dodge-crouch
+1311-1344	Dodge-back
+1345-1378	Dodge-Left
+1379-1412	Dodge_Right
+1413-1458	Jump up (Battle)
+
+
+Walk Battle:
+1459-1495	walk battle forward
+1495-1532	walk battle backward
+1771-1803	Walk battle Right
+1803-1835	Walk battle Left
+
+1533-1593	Walk_Back
+
+Run:
+1594-1610	Run
+1610-1643	Run_Stop
+1644-1662	Run_Jump
+
+Hits:
+1663-1698	Hit_Mid_Left
+1699-1734	Hit_Mid_Right
+1735-1770	Hit_Mid_Front
+
+Sneak Mode:
+1836-1851	Idle_To_Crouch
+1851-1893	Crouch_Idle
+1893-1908	Crouch_To_Idle
+1809-1945	Crouch_Walk
+
+Tired Mode:
+1946-2120	Tired_Walk
+2121-2313	Tired_Idle
+
+Throw_Rock:
+2314-2359	Throw_Rock
+
+Stumble:
+2360-2407	Stumble Right
+2408-2452	Stumble Left
+2453-2490	Stumble Front
+
+Loose:
+2491-2526	Loose_front
+2526-2634	Loose_Front_Recover
+2635-2695	Loose_Back
+2695-2781	Loose_Back_Recover
+
+Bump into Wall:
+2782-2834	Bump_Into_Wall
+
+Climbing:
+2835-2885	Climb_Over_Boxe
+
+2886-2920	Kicking Gnome
+
+2921-2936	Turn90 Left
+2937-2953	Turn90 Righ
+
+2954-3004	Jump and fall
+3005-3056	Roll Landi	ng
+
+2057-3061	Stand_To_block
+3061-3077	Block_Idle
+3077-3084	Block_Hit
+3084-3088	Block_To_Stand
+
+3089-3112	Stand_to_Fight2Hand
+3113-3206	Fight2hand_Loop
+3207-3243	Fight2hand_Forward
+3244-3280	Fight2hand_Back
+3281-3313	Fight2hand_Right
+3314-3346	Fight2hand_Left
+
+3347-3363	Run with weapon
+3364-3370	Fight2hand_to_Block
+3370-3398	Fight2hand_Block_Idle
+3398-3404	Fight2hand_block_To_Loop
+3404-3437	Fight2hand_Attack01
+3438-3465	Fight2hand_Attack02
+3466-3498	Fight2hand_Attack03
+3499-3528	Fight2hand_Attack04
+3529-3569	Fight2hand_Attack05
+3570-3607	Fight2hand_Attack06
+3608-3631	Fight_Kick
+
+3632-3668	Run_Slide
