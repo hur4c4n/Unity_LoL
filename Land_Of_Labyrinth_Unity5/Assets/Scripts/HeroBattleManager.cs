@@ -34,6 +34,8 @@ public class HeroBattleManager : MonoBehaviour {
 
     public GameObject[] lighting;
     public GameObject ice;
+    public GameObject fire;
+    public GameObject storm;
     private float initialCameraView;
 
     private float endOfBattleCounter;
@@ -149,7 +151,15 @@ public class HeroBattleManager : MonoBehaviour {
                     break;
                 case 2:
                     currentElemental.text = "Elemental: Ice";
-                    anim.SetFloat( blastIndex, 1 );
+                    anim.SetFloat( blastIndex, 0.3f );
+                    break;
+                case 3:
+                    currentElemental.text = "Elemental: Fire";
+                    anim.SetFloat( blastIndex, 0.6f );
+                    break;
+                case 4:
+                    currentElemental.text = "Elemental: Storm";
+                    anim.SetFloat( blastIndex, 1f );
                     break;
             }
             for ( int i = 0; i < handSwords.childCount; i++ )
@@ -371,7 +381,7 @@ public class HeroBattleManager : MonoBehaviour {
 
     public void checkEndOfBattle()
     {
-        Debug.Log( "end of battle " + endOfBattleCounter );
+        //Debug.Log( "end of battle " + endOfBattleCounter );
         if ( endOfBattleCounter >= 8 )
             anim.SetBool( hashBattleMode, false );
         else
@@ -420,17 +430,25 @@ public class HeroBattleManager : MonoBehaviour {
     public void blast()
     {
         if ( elementalIndex > 0 && manaBar.fillAmount == 1 )
-        {
+        {            
             manaBar.fillAmount = 0;
             setEnemiesNearbySlow( 1 );
             if ( elementalIndex == 1 )
             {
-                blastEnemies();
+                blastEnemies( false );
                 Camera.main.GetComponent<Animator>().Play( "Shake" );
                 for ( int i = 0; i < lighting.Length; i++ )
                     Instantiate( lighting[ i ], transform.position, Quaternion.identity );
             }else if ( elementalIndex == 2 )
                 Instantiate( ice, transform.position + new Vector3( 0, 1f, 0 ) + transform.forward, Quaternion.identity );
+            else if ( elementalIndex == 3 )
+                Instantiate( fire, transform.position + new Vector3( 0, 5f, 0 ) + transform.forward, Quaternion.identity );
+            else if ( elementalIndex == 4 )
+            {
+                blastEnemies( true );
+                Camera.main.GetComponent<Animator>().Play( "Shake" );
+                Instantiate( storm, transform.position, Quaternion.identity );
+            }                
         }       
         
     }
@@ -442,7 +460,7 @@ public class HeroBattleManager : MonoBehaviour {
             enemy.GetComponent<Animator>().speed = speed;                    
     }
 
-    void blastEnemies( )
+    void blastEnemies( bool storm )
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag( "Enemy" );
         foreach ( GameObject enemy in enemies )
@@ -451,6 +469,10 @@ public class HeroBattleManager : MonoBehaviour {
             {
                 enemy.GetComponent<Animator>().CrossFade( "BlownAwayStart", 0.01f );
                 enemy.GetComponent<Enemy>().battle.health -= 50;
+                if ( storm )
+                    enemy.GetComponent<Enemy>().battle.storm = true;
+                else
+                    enemy.GetComponent<Enemy>().battle.storm = false;
             }
         }               
     }
@@ -479,7 +501,7 @@ public class HeroBattleManager : MonoBehaviour {
 
     public void goTrailDagger( int i )
     {
-        Debug.Log( "yey " + i );
+        //Debug.Log( "yey " + i );
         MeleeWeaponTrail trail = transform.GetChild( 0 ).GetChild( 1 ).GetChild( 0 ).GetComponent<MeleeWeaponTrail>();
         if ( i == 0 )
             trail.Emit = false;

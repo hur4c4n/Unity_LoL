@@ -43,6 +43,7 @@ public class EnemyBattle{
 	public float health;
 	public int index;
 	public bool dead;
+    public bool storm;
 }
 
 public class HealthBar{
@@ -111,12 +112,17 @@ public class Enemy : MonoBehaviour {
     public int hashFightMode;
     [HideInInspector]
     public int hashFixHeight;
+    [HideInInspector]
+    public int hashDeath;
 
     public Transform weapon;
     private Transform heroHead;
     private Transform head;
 
+    private bool gravity;
+
 	public virtual void Start(){
+        gravity = true;
 		player = GameObject.Find( "Hero" );
         heroHead = player.transform.FindChild( "Sven Hood" ).FindChild( "Head" );
         head = transform.FindChild( "Sphere001" );
@@ -141,6 +147,7 @@ public class Enemy : MonoBehaviour {
 		canDropItem = true;
         hashFixPos = Animator.StringToHash( "FixPos" );
         hashFixHeight = Animator.StringToHash( "FixHeight" );
+        hashDeath = Animator.StringToHash( "Base Layer.Death" );
 
 		if ( healthBarGUI != null ) {
 			GameObject bar = ( GameObject )Instantiate( healthBarGUI );
@@ -348,6 +355,8 @@ public class Enemy : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    public float test;
+
     public void AnimationManager()
     {
 
@@ -398,10 +407,21 @@ public class Enemy : MonoBehaviour {
         if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BlownAwayStart" ) ||
            anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BlownAwayIdle" ) ||
            anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BlownAwayLanding" ) )
-           if ( anim.speed == 1 )
-                GetComponent<CharacterController>().Move( transform.forward * -anim.GetFloat( hashFixPos ) * Time.timeScale );
+            if ( anim.speed == 1 )
+            {
+                if ( battle.storm ){
+                    gravity = false;
+                    GetComponent<CharacterController>().Move( transform.up * anim.GetFloat( hashFixPos ) * Time.timeScale );
+                }                    
+                else
+                    GetComponent<CharacterController>().Move( transform.forward * -anim.GetFloat( hashFixPos ) * Time.timeScale );
+            }          
         
-        
+    }
+
+    void gravityFix()
+    {
+        GetComponent<CharacterController>().Move( new Vector3( 0, -10, 0 ) );
     }
 
     public void slowMotion( float time )
@@ -421,21 +441,31 @@ public class Enemy : MonoBehaviour {
         anim.CrossFade( "StandUp", 0.01f );
     }
 
+    public void setDeath(){
+        battle.dead = true;
+        anim.CrossFade( hashDeath, 0.1f );        
+        playSound( deadSound );
+        patrolling.setPathFinder( false );
+    }
+
 	public virtual void Update(){       
 		detection.playerDistance = Vector3.Distance( transform.position, player.transform.position );		
 		battle.damageCounter += Time.deltaTime;
-		//if ( glow != null ){
-		//	if ( mouseOver )			
-		//		glow.FlashingOn();
-		//	else
-		//		glow.FlashingOff();
-		//}
+        if ( gravity )
+            gravityFix();
         if ( IsDead() )
-        {
-            heroBattle.target = null;
-            //heroBattle.cancelBattleMode();
-        }      
+            heroBattle.target = null;      
 	}
+
+    public void cancelGravity()
+    {
+        gravity = false;
+    }
+
+    public void restoreGravity()
+    {
+        gravity = true;
+    }
 
     public void goTrail( int i )
     {

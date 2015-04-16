@@ -8,26 +8,22 @@ public class Paladin : Enemy
     private int hashDamage;
     private int hashDamageClip;
     private int hashQuickDamageClip;
-    private int hashQuickHit;
-    private int hashDeath;
+    private int hashQuickHit;    
     private int hashSendDamage;
     private int hashRandomIdle;
     private int hashCanHit;
-    private bool gravity;
     private EnemyWeapon goblinWeapon;
 
     public override void Start()
     {
 
-        base.Start();
-        gravity = true;
+        base.Start();        
         anim = gameObject.GetComponent<Animator>();
         goblinWeapon = transform.GetChild( 0 ).GetComponent<EnemyWeapon>();
         hashDamage = Animator.StringToHash( "Damage" );
         hashDamageClip = Animator.StringToHash( "Base Layer.Hit" );
         hashQuickDamageClip = Animator.StringToHash( "Base Layer.QuickHit" );
-        hashQuickHit = Animator.StringToHash( "QuickHit" );
-        hashDeath = Animator.StringToHash( "Base Layer.Death" );
+        hashQuickHit = Animator.StringToHash( "QuickHit" );        
         hashSendDamage = Animator.StringToHash( "SendDamage" );
         hashFightModeClip = Animator.StringToHash( "Base Layer.Fight_Idle" );
         hashCanHit = Animator.StringToHash( "CanHit" );
@@ -143,27 +139,10 @@ public class Paladin : Enemy
         base.Update();
         AnimationManager();
         HealthBarManager();
-        if ( gravity )
-            gravityFix();
         if ( HeroDetected() && patrolling.patrolling ) this.setChasingState();
         if ( ContinuePatroll() ) this.setWalk();
         //if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "HitMiddle" ) && anim.GetCurrentAnimatorStateInfo( 0 ).normalizedTime < 0.75f )
         //GetComponent<CharacterController>().Move( ( -transform.forward + transform.right ) * 0.01f );
-    }
-
-    void gravityFix()
-    {
-        GetComponent<CharacterController>().Move( new Vector3( 0, -10, 0 ) );
-    }
-
-    public void cancelGravity()
-    {
-        gravity = false;
-    }
-
-    public void restoreGravity()
-    {
-        gravity = true;
     }
 
     void OnGUI()

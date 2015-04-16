@@ -5,8 +5,7 @@ public class Ogre : Enemy {
    
     private int hashHitRight;
     private int hashHitLeft;
-    private int hashHitMiddle;
-    private int hashDeath;
+    private int hashHitMiddle;    
     public GameObject dust;
     public AudioClip[] dustSounds;
 
@@ -16,8 +15,7 @@ public class Ogre : Enemy {
         anim = gameObject.GetComponent<Animator>();        
         hashWalk = Animator.StringToHash( "Walk" );
         hashRun = Animator.StringToHash( "Run" );
-        hashFightMode = Animator.StringToHash( "FightMode" );      
-        hashDeath = Animator.StringToHash( "Base Layer.Death" );
+        hashFightMode = Animator.StringToHash( "FightMode" );              
         hashAttack1 = Animator.StringToHash( "Base Layer.StepBackAttack1" );
         hashAttack2 = Animator.StringToHash( "Base Layer.Attack2" );
         hashAttack3 = Animator.StringToHash( "Base Layer.StepBackAttack3" );
@@ -97,7 +95,6 @@ public class Ogre : Enemy {
         base.Update();
         AnimationManager();
         HealthBarManager();
-        gravityFix();
         if ( HeroDetected() && patrolling.patrolling ) this.setChasingState();
         if ( ContinuePatroll() ) this.setWalk();
 
@@ -123,11 +120,6 @@ public class Ogre : Enemy {
         dust.gameObject.SetActive( true );
         playSound( dustSounds[ Random.Range( 0, 1 ) ] );
         Camera.main.GetComponent<Animator>().Play( "Shake" );
-    }
-
-    void gravityFix()
-    {
-        GetComponent<CharacterController>().Move( new Vector3( 0, -10, 0 ) );
     }
 
 }
