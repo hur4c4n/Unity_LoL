@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 54959da319c7c0049b88016e65349325
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: Body
     100002: Bottom-Interior
@@ -87,6 +87,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -102,14 +103,16 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -130,4 +133,7 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 1
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

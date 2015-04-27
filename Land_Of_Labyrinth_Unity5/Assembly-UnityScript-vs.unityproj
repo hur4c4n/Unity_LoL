@@ -128,9 +128,11 @@
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\Characters\Hero\Hero_Anim_Range.txt" />
      <None Include="Assets\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
@@ -159,7 +161,6 @@
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
      <None Include="Assets\Autumn\Shaders Scripts\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Water.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\Autumn\Shaders Scripts\atsV2 billboardShader package\TreeCreatorBarkRendertex.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\Distortion\DistortionCutOutBack.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\IceShaderDistortion.shader" />
@@ -169,12 +170,12 @@
      <None Include="Assets\Scripts\Silhouetted.shader" />
      <None Include="Assets\Characters\Paladin\Paladin Range.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\Top Down\tools scripts\TriPlanarTerrain\Shaders\triPlanarTerrain.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Bump.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
      <None Include="Assets\Realistic Effects Pack\Readme.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Diffuse.shader" />
@@ -194,14 +195,15 @@
      <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionParticlesCutout.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Diffuse.shader" />
      <None Include="Assets\Autumn\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCullBack+1.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\AlphaBlended.shader" />
      <None Include="Assets\Characters\Goblin\Goblin animation range.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Bump.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent.shader" />
      <None Include="Assets\Autumn\Shaders Scripts\atsV2 billboardShader package\Tree.cginc" />
@@ -214,10 +216,8 @@
      <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditiveTwoColor.shader" />
      <None Include="Assets\Characters\Paladin Range.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Explosion.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Diffuse.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\Characters\Hero\Hero_Anim_Range - 02.txt" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Diffuse.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
@@ -233,6 +233,7 @@
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\Distortion\DistortionParticlesCutout.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCullOff.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\Characters\Paladin\Paladin Range (1).txt" />
@@ -244,9 +245,10 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Bump.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
      <None Include="Assets\SWS\Textures\car\Shaders\LightsEmmissive.shader" />
@@ -256,15 +258,13 @@
      <None Include="Assets\Realistic Effects Pack\Shaders\MultiplyDouble.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Projectors\ProjectorAdditive.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Example8_PathTypes\SquareShader.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionParticles.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\SlimeCutOut.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Bump.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Example8_PathTypes\SquareShader.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\Distortion\Distortion.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\IceVert.shader" />
@@ -291,7 +291,6 @@
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCutOut.shader" />
      <None Include="Assets\Universal Sound FX\#Game Genre References\Shoot em Up.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
@@ -301,11 +300,12 @@
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\Universal Sound FX\#Game Genre References\Real Time Stategy (RTS) Medieval.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\IceShaderDistortion.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\Distortion\DistortionCullBack+1.shader" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Based\DesaturateEffect.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Mobile\SlimeCutOut.shader" />
@@ -323,6 +323,7 @@
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Bump.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Specular.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Projectors\ProjectorBlended.shader" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
@@ -330,25 +331,24 @@
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface SFX Depth Write Only.shader" />
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\link.xml" />
      <None Include="Assets\Universal Sound FX\#Game Genre References\Puzzle.txt" />
      <None Include="Assets\Top Down\!Readme.txt" />
      <None Include="Assets\Autumn\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\ShurikenMagic\Shaders\SM_TransparentRim.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/LandOfLabyrinth/Unity_LoL/Land_Of_Labyrinth_Unity5/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/Unity_LoL/Land_Of_Labyrinth_Unity5/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/ProgramData/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Ionic.Zip.Reduced">
- <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/LandOfLabyrinth/Unity_LoL/Land_Of_Labyrinth_Unity5/Assets/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/Unity_LoL/Land_Of_Labyrinth_Unity5/Assets/AstarPathfindingProject/Plugins/DotNetZip/Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="JsonFx.Json">
- <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/LandOfLabyrinth/Unity_LoL/Land_Of_Labyrinth_Unity5/Assets/Plugins/AstarPathfindingProject/Plugins/JsonFx/JsonFx.Json.dll</HintPath>
+ <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/Unity_LoL/Land_Of_Labyrinth_Unity5/Assets/AstarPathfindingProject/Plugins/JsonFx/JsonFx.Json.dll</HintPath>
  </Reference>
  <Reference Include="HOTween">
- <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/LandOfLabyrinth/Unity_LoL/Land_Of_Labyrinth_Unity5/Assets/SWS/Scripts/Holoville/HOTween.dll</HintPath>
+ <HintPath>C:/Users/Pauleta Milanez/Documents/UnityProjects/Unity_LoL/Land_Of_Labyrinth_Unity5/Assets/SWS/Scripts/Holoville/HOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
