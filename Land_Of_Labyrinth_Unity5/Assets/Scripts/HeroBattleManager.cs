@@ -100,18 +100,22 @@ public class HeroBattleManager : MonoBehaviour {
                           anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "WalkBattle" ) ||
                           anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BlockIdle" ) ||
                           anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BlockToStand" ) )
-                    anim.CrossFade( "Attack1", 0.01f );                
-                else if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Idle" ) ||
-                          anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Run" ) ||
-                          anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Walk" ) ||
-                          anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Roll" ) ||
-                          anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "RunStop" ) )
-                {
-                    anim.SetBool( hashBattleMode, true );
-                    anim.SetTrigger( "QuickAttack" );                                            
-                }                    
+                    anim.CrossFade( "Attack1", 0.01f );                                                    
             }            
-        }       
+        }   
+    
+        if ( Input.GetKeyDown( KeyCode.Q ) ){
+            //if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Idle" ) ||
+            //     anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Run" ) ||
+            //     anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Walk" ) ||
+            //     anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Roll" ) ||
+            //     anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "RunStop" ) )
+            //{
+                anim.SetBool( hashBattleMode, !anim.GetBool( hashBattleMode ) );
+            //}else if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BattleIdle" ) ) 
+            //    anim.SetBool( hashBattleMode, false );                                                          
+        }
+
         if ( Input.GetMouseButtonDown( 1 ) ){
             if ( !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Attack1" ) &&
                  !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Attack2" ) &&
