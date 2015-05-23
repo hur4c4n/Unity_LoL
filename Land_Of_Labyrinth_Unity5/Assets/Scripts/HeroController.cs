@@ -175,8 +175,8 @@ public class HeroController: MonoBehaviour {
     }        		
 
 	public void kickGnome(){
-		anim.SetBool( hashKick, true );
-		Invoke( "cancelKick", 1f );
+		anim.CrossFade( "Kick", 0.01f );
+		//Invoke( "cancelKick", 1f );
 	}
 
 	void cancelKick(){

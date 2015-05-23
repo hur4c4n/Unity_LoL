@@ -14,7 +14,7 @@ public class Item : MonoBehaviour {
 
 	void Start(){
 		canRestore = true;
-		label = GameObject.FindGameObjectWithTag( "ItemLabel" ).transform;
+		//label = GameObject.FindGameObjectWithTag( "ItemLabel" ).transform;
 	}
 
 	void Update () {
@@ -31,16 +31,16 @@ public class Item : MonoBehaviour {
 						gameObject.GetComponent<Renderer>().enabled = false;
 						gameObject.GetComponent<Collider>().enabled = false;
 						Destroy( gameObject, 5 );
-						label.GetComponent< UILabel >().text = name;
-						label.GetComponent< UIWidget >().color = new Color( 1, 1, 1, 1.5f );
-						label.transform.localPosition = Vector3.zero;
+						//label.GetComponent< UILabel >().text = name;
+						//label.GetComponent< UIWidget >().color = new Color( 1, 1, 1, 1.5f );
+						//label.transform.localPosition = Vector3.zero;
 					}
 				}
 			}
 		}
 		if ( showHUD ){
-			label.transform.localPosition += new Vector3( 0, 1, 0 );
-			label.GetComponent< UIWidget >().color = Color.Lerp( label.GetComponent< UIWidget >().color, new Color( 1, 1, 1, 0 ), Time.deltaTime * 1 );
+			//label.transform.localPosition += new Vector3( 0, 1, 0 );
+			//label.GetComponent< UIWidget >().color = Color.Lerp( label.GetComponent< UIWidget >().color, new Color( 1, 1, 1, 0 ), Time.deltaTime * 1 );
 		}
 	}
 

@@ -94,7 +94,7 @@ public class Gnome : Enemy {
 			patrolling.patrolling = false;
 			patrolling.patrollingWay.Stop();
 			patrolling.pathFinder.canMove = false;
-			dustParticle.GetComponent< ParticleEmitter >().enabled = false;
+			//dustParticle.GetComponent< ParticleEmitter >().enabled = false;
 			//setFocus( true, 3 );
 			//Invoke( "enableCamera", 0 );
 		}
