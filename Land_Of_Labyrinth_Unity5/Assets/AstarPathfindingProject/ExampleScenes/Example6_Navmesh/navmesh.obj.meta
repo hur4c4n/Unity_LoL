@@ -3,9 +3,16 @@ guid: 6ac6694dd977643948f7ae7305e370ba
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: navmesh_example6navmesh
+    400000: //RootNode
+    400002: navmesh_example6navmesh
+    2300000: navmesh_example6navmesh
+    3300000: navmesh_example6navmesh
     4300000: example6navmesh
     4300002: default
     4300004: navmesh_example6navmesh
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3

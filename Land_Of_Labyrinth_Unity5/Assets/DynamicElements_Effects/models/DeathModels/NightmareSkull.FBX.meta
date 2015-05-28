@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 505330d4a52bfd5488c72c5bd000de91
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: hair
     100002: eye
@@ -119,11 +119,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -146,3 +148,5 @@ ModelImporter:
   animationType: 1
   additionalBone: 1
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

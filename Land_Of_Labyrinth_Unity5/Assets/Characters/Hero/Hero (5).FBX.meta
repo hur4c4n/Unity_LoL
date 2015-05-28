@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 2e4b846f70bcdaa449f4d02146e6c0aa
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: Bag
     100002: Bip001
@@ -168,6 +168,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 1
+    motionNodeName: 
     animationCompression: 0
     animationRotationError: .5
     animationPositionError: .5
@@ -446,11 +447,13 @@ ModelImporter:
     generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -1202,4 +1205,7 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
+  additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
