@@ -46,7 +46,7 @@ Temporary Items
 *.sln
 *.suo
 *.csproj
-*.meta
 
 /Land_Of_Labyrinth_Unity5/Library
 /Land_Of_Labyrinth_Unity5/obj
+/Land_Of_Labyrinth_Unity5/Temp
