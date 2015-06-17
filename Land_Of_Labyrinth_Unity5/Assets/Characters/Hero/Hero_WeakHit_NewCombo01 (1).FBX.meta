@@ -216,6 +216,13 @@ ModelImporter:
         floatParameter: .00749999983
         intParameter: 0
         messageOptions: 0
+      - time: .178357095
+        functionName: CheckWeaponInHand
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: .00749999983
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -454,6 +461,13 @@ ModelImporter:
         floatParameter: .00749999983
         intParameter: 0
         messageOptions: 0
+      - time: .191782013
+        functionName: CheckWeaponInHand
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: .00749999983
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -687,6 +701,13 @@ ModelImporter:
       events:
       - time: .125207081
         functionName: pauseAnim
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: .00749999983
+        intParameter: 0
+        messageOptions: 0
+      - time: .207428724
+        functionName: CheckWeaponInHand
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: .00749999983

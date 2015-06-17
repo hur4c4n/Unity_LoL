@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 public class Chest : MonoBehaviour {
 	
@@ -18,7 +19,10 @@ public class Chest : MonoBehaviour {
 
     void Update()
     {
-        if ( Vector3.Distance( transform.position, hero.transform.position ) < 1 && Input.GetMouseButtonDown( 0 ) && !opened )
+        if ( Vector3.Distance( transform.position, hero.transform.position ) < 1 && !opened &&
+           ( Input.GetMouseButtonDown( 0 ) || 
+           InputManager.ActiveDevice.Action3.WasPressed ||
+           InputManager.ActiveDevice.GetControl( InputControlType.Button3 ).WasPressed ) )
         {
             opened = true;
             GetComponent<Animator>().Play( "box_open" );

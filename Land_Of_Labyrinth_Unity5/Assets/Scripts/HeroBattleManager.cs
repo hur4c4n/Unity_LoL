@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 public class HeroBattleManager : MonoBehaviour {
 
@@ -62,7 +63,9 @@ public class HeroBattleManager : MonoBehaviour {
 	}
 
 	void Update () {        
-        if ( Input.GetButtonDown( "Fire1" ) )
+        if ( Input.GetButtonDown( "Fire1" ) || 
+             InputManager.ActiveDevice.Action3.WasPressed ||
+             InputManager.ActiveDevice.GetControl( InputControlType.Button3 ).WasPressed )
         {
             if ( !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "HitMiddle" ) &&
                  !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "HitLeft" ) &&
@@ -104,7 +107,9 @@ public class HeroBattleManager : MonoBehaviour {
             }            
         }   
     
-        if ( Input.GetKeyDown( KeyCode.Q ) ){
+        if ( Input.GetKeyDown( KeyCode.Q ) || 
+            InputManager.ActiveDevice.GetControl( InputControlType.Button2 ).WasPressed || 
+            InputManager.ActiveDevice.Action2.WasPressed ){
             //if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Idle" ) ||
             //     anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Run" ) ||
             //     anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Walk" ) ||
@@ -116,14 +121,18 @@ public class HeroBattleManager : MonoBehaviour {
             //    anim.SetBool( hashBattleMode, false );                                                          
         }
 
-        if ( Input.GetMouseButtonDown( 1 ) ){
+        if ( Input.GetMouseButtonDown( 1 ) || 
+            InputManager.ActiveDevice.GetControl( InputControlType.Button5 ).WasPressed || 
+            InputManager.ActiveDevice.RightBumper.WasPressed ){
             if ( !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Attack1" ) &&
                  !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Attack2" ) &&
                  !anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "Attack3" ) ){
                      anim.CrossFade( "StandToBlock", 0.01f );
             }   
-        }             
-        if ( Input.GetMouseButton( 1 ) ) 
+        }
+        if ( Input.GetMouseButton( 1 ) ||
+            InputManager.ActiveDevice.GetControl( InputControlType.Button5 ) ||
+            InputManager.ActiveDevice.RightBumper ) 
         {
             blocking = true;
             anim.SetBool( hashBlock, true );
@@ -131,14 +140,18 @@ public class HeroBattleManager : MonoBehaviour {
             blocking = false;
             anim.SetBool( hashBlock, false );        
         }
-        if ( Input.GetKeyDown( KeyCode.Tab ) )
+        if ( Input.GetKeyDown( KeyCode.Tab ) ||
+            InputManager.ActiveDevice.GetControl( InputControlType.Button1 ).WasPressed ||
+            InputManager.ActiveDevice.Action1.WasPressed )
         {
-            twoHands = !twoHands;                   
-            if ( anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BattleIdle" ) || anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "WalkBattle" ) )
+            twoHands = !twoHands;       
+            if ( anim.tag == "Tab" )
                 anim.CrossFade( "HideSword", 0.01f );
         }
 
-        if ( Input.GetKeyDown( KeyCode.E ) )
+        if ( Input.GetKeyDown( KeyCode.E ) || 
+            InputManager.ActiveDevice.GetControl( InputControlType.Button0 ).WasPressed || 
+            InputManager.ActiveDevice.Action4.WasPressed )
         {
             if ( elementalIndex < handSwords.childCount - 1 )
                 elementalIndex++;
@@ -198,8 +211,10 @@ public class HeroBattleManager : MonoBehaviour {
             }              
 
         //}
-        
-        if ( Input.GetKeyDown( KeyCode.B ) && 
+
+            if ( ( Input.GetKeyDown( KeyCode.B ) ||
+                InputManager.ActiveDevice.GetControl( InputControlType.Button4 ) ||
+                InputManager.ActiveDevice.LeftBumper ) && 
             anim.GetCurrentAnimatorStateInfo( 0 ).IsName( "BattleIdle" ) && 
             anim.GetFloat( hashTwoHands ) == 1 &&
             manaBar.fillAmount == 1 &&
@@ -265,6 +280,7 @@ public class HeroBattleManager : MonoBehaviour {
         foreach ( GameObject enemy in enemies )
         {
             enemySendDamage = enemy.GetComponent<Enemy>();
+            Debug.Log( enemy.name );
             if ( Vector3.Distance( transform.position, enemy.transform.position ) < enemySendDamage.minDistanceDamage )
             {
                 if ( getAngle( enemy.transform ) < 60 && getAngle( enemy.transform ) < 300 ) 
@@ -319,9 +335,9 @@ public class HeroBattleManager : MonoBehaviour {
 
     IEnumerator cameraShine()
     {
-        Camera.main.transform.GetChild( 0 ).GetComponent<Renderer>().material.color = new Color( 1, 1, 1, 0.075f );
+        //Camera.main.transform.GetChild( 0 ).GetComponent<Renderer>().material.color = new Color( 1, 1, 1, 0.075f );
         yield return new WaitForSeconds( 0.1f );
-        Camera.main.transform.GetChild( 0 ).GetComponent<Renderer>().material.color = new Color( 1, 1, 1, 0 );
+        //Camera.main.transform.GetChild( 0 ).GetComponent<Renderer>().material.color = new Color( 1, 1, 1, 0 );
     }
 
     public IEnumerator pauseAnim( float time )
@@ -334,7 +350,7 @@ public class HeroBattleManager : MonoBehaviour {
     public void getDamage( Transform enemy, string side, bool block )
     {
         goTrail( 0 );
-        //StartCoroutine( pauseAnim( enemy.transform ) );
+        anim.SetBool( hashBattleMode, true );
         StartCoroutine( cameraShine() );
         if ( block )
         {
@@ -378,6 +394,30 @@ public class HeroBattleManager : MonoBehaviour {
             
     }
 
+    public void CheckWeaponInHand()
+    {
+        if ( twoHands )
+        {
+            transform.GetChild( 0 ).GetChild( 0 ).gameObject.SetActive( true );
+            transform.GetChild( 0 ).GetChild( 1 ).gameObject.SetActive( false );
+        }else{
+            transform.GetChild( 0 ).GetChild( 0 ).gameObject.SetActive( false );
+            transform.GetChild( 0 ).GetChild( 1 ).gameObject.SetActive( true );
+        }
+        HideAllWeaponsBack();
+    }
+
+    void HideAllWeaponsBack()
+    {
+        for ( int i = 0; i < transform.GetChild( 5 ).GetChild( 0 ).childCount; i++ )
+        {
+            if ( twoHands )
+                transform.GetChild( 5 ).GetChild( 0 ).GetChild( i ).gameObject.SetActive( false );
+            else if ( i > 0 )
+                transform.GetChild( 5 ).GetChild( 0 ).GetChild( i ).gameObject.SetActive( false );
+        } 
+    }
+
     //void cancelBattleMode()
     //{
     //    anim.SetBool( hashBattleMode, false );
@@ -386,10 +426,10 @@ public class HeroBattleManager : MonoBehaviour {
     public void checkEndOfBattle()
     {
         //Debug.Log( "end of battle " + endOfBattleCounter );
-        if ( endOfBattleCounter >= 8 )
-            anim.SetBool( hashBattleMode, false );
-        else
-            anim.SetBool( hashBattleMode, true );
+        //if ( endOfBattleCounter >= 8 )
+        //    anim.SetBool( hashBattleMode, false );
+        //else
+        //    anim.SetBool( hashBattleMode, true );
         /*GameObject[] enemies = GameObject.FindGameObjectsWithTag( "Enemy" );
         foreach ( GameObject enemy in enemies )
         {            

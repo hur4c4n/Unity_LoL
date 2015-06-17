@@ -213,8 +213,8 @@ public class UIInput : MonoBehaviour
 
 #if MOBILE && !UNITY_3_5
 			// BB10's implementation has a bug in Unity
-			if (Application.platform == RuntimePlatform.BB10Player)
-				value = value.Replace("\\b", "\b");
+			//if (Application.platform == RuntimePlatform.BB10Player)
+			//	value = value.Replace("\\b", "\b");
 #endif
 			// Validate all input
 			value = Validate(value);

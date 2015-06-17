@@ -149,14 +149,14 @@ public class Enemy : MonoBehaviour {
         hashFixHeight = Animator.StringToHash( "FixHeight" );
         hashDeath = Animator.StringToHash( "Base Layer.Death" );
 
-		if ( healthBarGUI != null ) {
+		/*if ( healthBarGUI != null ) {
 			GameObject bar = ( GameObject )Instantiate( healthBarGUI );
 			healthBar = new HealthBar();
 			healthBar.bar = bar.transform.Find( "Camera/Anchor/Panel/Progress Bar" ).gameObject;
 			healthBar.slider = healthBar.bar.GetComponent< UISlider >();
 			healthBar.root = bar.GetComponent< UIRoot >();
 			healthBar.root.manualHeight = Screen.height;
-		}
+		}*/
 	}
 
 	public bool HeroDetected(){
@@ -304,13 +304,14 @@ public class Enemy : MonoBehaviour {
 	}
 	
 	public void HealthBarManager(){
-		if ( detection.playerDistance < battle.minDistanceAttack + 2 )	
+		/*if ( detection.playerDistance < battle.minDistanceAttack + 2 )	
 			healthBar.bar.SetActive( true );	
 		else
 			healthBar.bar.SetActive( false );
 		healthBar.bar.transform.localPosition = Camera.main.WorldToScreenPoint( transform.position + healthBarAdjustment );
 		healthBar.bar.transform.localPosition -= new Vector3( 30, 0, 0 );
 		healthBar.slider.sliderValue = Mathf.MoveTowards( healthBar.slider.sliderValue, battle.health/100, 1 );
+         */
 	}
 
 	public void dropItem(){

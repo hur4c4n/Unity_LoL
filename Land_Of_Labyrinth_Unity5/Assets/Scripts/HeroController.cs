@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using InControl;
 
 
 public class HeroController: MonoBehaviour {
@@ -84,6 +85,11 @@ public class HeroController: MonoBehaviour {
     private bool canRoll;
 
     public AudioClip[] roll;
+
+    void Start()
+    {
+        InputManager.Setup();        
+    }
 	
 	void Awake ()
 	{        
@@ -100,7 +106,12 @@ public class HeroController: MonoBehaviour {
         hashFixpos = Animator.StringToHash( "FixPos" );
         hashBattleMode = Animator.StringToHash( "BattleMode" );
         hashSwordInHands = Animator.StringToHash( "SwordInHands" );
-	}	
+	}
+
+    public void ResetGame()
+    {
+        Application.LoadLevel( Application.loadedLevelName );
+    }
 
 	void UpdateSmoothedMovementDirection ()
 	{		
@@ -110,9 +121,11 @@ public class HeroController: MonoBehaviour {
 		forward.y = 0;
 		forward = forward.normalized;		
 
-		Vector3 right = new Vector3( forward.z, 0, -forward.x );	
-		v = Input.GetAxisRaw("Vertical");
+		Vector3 right = new Vector3( forward.z, 0, -forward.x );
+        v = Input.GetAxisRaw( "Vertical" );  
+        //v = InputManager.ActiveDevice.GetControl( InputControlType.Analog1 ).Value * -1;
 		h = Input.GetAxisRaw("Horizontal");
+        //h = InputManager.ActiveDevice.GetControl( InputControlType.Analog0 ).Value;
 		anim.SetFloat ( hashHorizontal, h );
 		anim.SetFloat ( hashVertical, v );        
 		inputDirection = Vector3.Lerp( inputDirection, h * right + v * forward, Time.deltaTime * rotateSpeed );
@@ -139,7 +152,10 @@ public class HeroController: MonoBehaviour {
             anim.SetBool( hashMoving, true );            
         else
             anim.SetBool( hashMoving, false );
-        if ( Input.GetButton( "Run" ) )
+        if ( Input.GetButton( "Run" ) || 
+            InputManager.ActiveDevice.GetControl( InputControlType.Button6 ) ||
+            InputManager.ActiveDevice.RightTrigger
+            )
         {
             currentSpeed = runSpeed;
             anim.SetBool( hashRuning, true );
@@ -237,7 +253,8 @@ public class HeroController: MonoBehaviour {
     }
 
 	void Update() {
-					
+
+        InputManager.Update();
 		UpdateSmoothedMovementDirection();		
 		AnimationManager();		        
         GravityFix();		

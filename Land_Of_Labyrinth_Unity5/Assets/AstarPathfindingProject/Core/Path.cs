@@ -628,7 +628,8 @@ public override void Recycle () {
 			text.Append ("\nPath Number ");
 			text.Append (pathID);
 			
-			return text.ToString ();
+			//return text.ToString ();
+            return "";
 		}
 		
 		/** Calls callback to return the calculated path. \see #callback */

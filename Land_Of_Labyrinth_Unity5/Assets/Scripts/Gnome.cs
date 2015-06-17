@@ -11,9 +11,9 @@ public class Gnome : Enemy {
 	public GameObject disappearEffect;
 	public GameObject dustParticle;
 
-	private Animator anim;
-	private int hashWalk;
-	private int hashRun;
+	//private Animator anim;
+	//private int hashWalk;
+	//private int hashRun;
 	private int hashRunClip;
 	private int hashHit;
 	private bool canDisappear;

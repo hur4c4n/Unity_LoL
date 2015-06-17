@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Goblin : Enemy {
 
-	private int hashFightModeClip;
 	private int hashDamage;
 	private int hashDamageClip;
 	private int hashQuickDamageClip;
@@ -22,16 +21,14 @@ public class Goblin : Enemy {
 		hashDamageClip = Animator.StringToHash( "Base Layer.Hit" );
 		hashQuickDamageClip = Animator.StringToHash( "Base Layer.QuickHit" );
 		hashQuickHit = Animator.StringToHash( "QuickHit" );		
-		hashSendDamage = Animator.StringToHash( "SendDamage" );
-		hashFightModeClip = Animator.StringToHash( "Base Layer.Fight_Idle" );
+		hashSendDamage = Animator.StringToHash( "SendDamage" );		
         hashCanHit = Animator.StringToHash( "CanHit" );
         hashRandomIdle = Animator.StringToHash( "RandomIdle" );
         hashAttack1 = Animator.StringToHash( "Base Layer.Attack1" );
         hashAttack2 = Animator.StringToHash( "Base Layer.Attack2" );
         hashAttack3 = Animator.StringToHash( "Base Layer.Attack3" );
         hashWalk = Animator.StringToHash( "Walk" );
-        hashRun = Animator.StringToHash( "Run" );
-        hashFightMode = Animator.StringToHash( "FightMode" );
+        hashRun = Animator.StringToHash( "Run" );        
         attacks = new ArrayList();
         attacks.Add( hashAttack1 );
         attacks.Add( hashAttack2 );

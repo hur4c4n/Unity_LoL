@@ -129,15 +129,20 @@ function Update () {
 }// End of Update
 
 function AdjustHorizontal(){
-	hRotation += Input.GetAxis("Mouse X") * horizontal.mouseSensitivity ;			
-	hRotation = AngleClamp( hRotation, horizontal.minimumAngle, horizontal.maximumAngle);
+    hRotation += Input.GetAxis("Mouse X") * horizontal.mouseSensitivity ;			
+    //hRotation += Input.GetAxis("joystick 1 analog 2") * horizontal.mouseSensitivity ;	
+    hRotation = AngleClamp( hRotation, horizontal.minimumAngle, horizontal.maximumAngle);
 	rotationObject.transform.localEulerAngles.y = hRotation;	
 	
 }
 
 function AdjustVertical(){
-	vRotation = vRotation - Input.GetAxis("Mouse Y") * vertical.mouseSensitivity;			
-	vRotation = AngleClamp( vRotation, vertical.minimumAngle, vertical.maximumAngle);	
+    vRotation = vRotation - Input.GetAxis("Mouse Y") * vertical.mouseSensitivity;			
+    //vRotation = Input.GetAxis("joystick 1 analog 3") * vertical.mouseSensitivity;			
+   // if ( vRotation != 0 )
+        vRotation = AngleClamp( vRotation, vertical.minimumAngle, vertical.maximumAngle);	
+    //else
+    //    vRotation = AngleClamp( vRotation, 0, vertical.maximumAngle);	
 			
 	rotationObject.transform.localEulerAngles.x = vRotation;
 }
